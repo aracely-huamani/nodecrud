@@ -9,7 +9,7 @@ const tasksRoutes = require('./routes/tasks');
 
 
 const app = express();
-app.set('port',4000);
+app.set('port',PORT);
 
 app.use(bodyParser.urlencoded({
   extended: true

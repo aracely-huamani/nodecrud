@@ -12,7 +12,7 @@ const MYSQLHOST = process.env.MYSQLHOST || 'localhost'
 const MYSQLUSER = process.env.MYSQLUSER || 'root'
 const MYSQLPASSWORD = process.env.MYSQLPASSWORD || ''
 const MYSQLPORT = process.env.MYSQLPORT || '3306'
-const DATABASE = process.env.MYSQLDATABASE || 'pacientesdb'
+const MYSQLDATABASE = process.env.MYSQLDATABASE || 'pacientesdb'
 const app = express();
 app.set('port',PORT);
 

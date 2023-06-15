@@ -32,8 +32,8 @@ app.use(myconnection(mysql, {
   MYSQLUSER: MYSQLUSER,
   MYSQLPASSWORD: MYSQLPASSWORD,
   MYSQLPORT: MYSQLPORT,
-  MYSQLDATABASE: MYSQLDATABASE
-},));
+  MYSQLDATABASE: MYSQLDATABASE,
+},'single'));
 
 app.listen(app.get('port'), () => {
   console.log('Listening on port ', app.get('port'));

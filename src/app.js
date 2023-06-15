@@ -7,10 +7,9 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const tasksRoutes = require('./routes/tasks');
 
-import {PORT} from 'config.js'
 
 const app = express();
-app.set('port', PORT);
+app.set('port');
 
 app.use(bodyParser.urlencoded({
   extended: true

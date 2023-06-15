@@ -23,7 +23,7 @@ app.use(myconnection(mysql, {
   MYSQLHOST: 'containers-us-west-36.railway.app',
   MYSQLUSER: 'root',
   MYSQLPASSWORD: 'BbWlQ1abtMpWiU6InfWN',
-  MYSQLPORT: 3306,
+  MYSQLPORT: 6760,
   MYSQLDATABASE: 'railway'
 }, 'single'));
 

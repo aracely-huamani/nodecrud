@@ -13,6 +13,8 @@ const MYSQLUSER = process.env.MYSQLUSER || 'root'
 const MYSQLPASSWORD = process.env.MYSQLPASSWORD || ''
 const MYSQLPORT = process.env.MYSQLPORT || '3306'
 const MYSQLDATABASE = process.env.MYSQLDATABASE || 'pacientesdb'
+
+
 const app = express();
 app.set('port',PORT);
 
@@ -32,7 +34,7 @@ app.use(myconnection(mysql, {
   MYSQLUSER: MYSQLUSER,
   MYSQLPASSWORD: MYSQLPASSWORD,
   MYSQLPORT: MYSQLPORT,
-  MYSQLDATABASE: MYSQLDATABASE,
+  MYSQLDATABASE: MYSQLDATABASE
 },'single'));
 
 app.listen(app.get('port'), () => {

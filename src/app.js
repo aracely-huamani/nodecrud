@@ -8,6 +8,11 @@ const mysql = require('mysql');
 const tasksRoutes = require('./routes/tasks');
 
 const PORT = process.env.PORT || 4000
+const MYSQLHOST = process.env.MYSQLHOST || 'localhost'
+const MYSQLUSER = process.env.MYSQLUSER || 'root'
+const MYSQLPASSWORD = process.env.MYSQLPASSWORD || ''
+const MYSQLPORT = process.env.MYSQLPORT || '3306'
+const DATABASE = process.env.MYSQLDATABASE || 'pacientesdb'
 const app = express();
 app.set('port',PORT);
 
@@ -23,11 +28,11 @@ app.engine('.hbs', engine({
 app.set('view engine', 'hbs');
 
 app.use(myconnection(mysql, {
-  MYSQLHOST: 'containers-us-west-36.railway.app',
-  MYSQLUSER: 'root',
-  MYSQLPASSWORD: 'BbWlQ1abtMpWiU6InfWN',
-  MYSQLPORT: 6760,
-  MYSQLDATABASE: 'railway'
+  MYSQLHOST: MYSQLHOST,
+  MYSQLUSER: MYSQLUSER,
+  MYSQLPASSWORD: MYSQLPASSWORD,
+  MYSQLPORT: MYSQLPORT,
+  MYSQLDATABASE: MYSQLDATABASE
 },));
 
 app.listen(app.get('port'), () => {

@@ -1,3 +1,5 @@
+import {PORT} from './config.js'
+
 const express = require('express');
 const { engine } = require('express-handlebars');
 const myconnection = require('express-myconnection');
@@ -6,7 +8,7 @@ const mysql = require('mysql');
 const tasksRoutes = require('./routes/tasks');
 
 const app = express();
-app.set('port', 6760);
+app.set('port', PORT);
 
 app.use(bodyParser.urlencoded({
   extended: true

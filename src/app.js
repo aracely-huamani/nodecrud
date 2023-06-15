@@ -29,7 +29,7 @@ app.engine('.hbs', engine({
 }));
 app.set('view engine', 'hbs');
 
-app.use(myconnectio(mysql.createPool,{
+app.use(myconnection(mysql.createPool,{
   MYSQLHOST: MYSQLHOST,
   MYSQLUSER: MYSQLUSER,
   MYSQLPASSWORD: MYSQLPASSWORD,

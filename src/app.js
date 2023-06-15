@@ -20,11 +20,11 @@ app.engine('.hbs', engine({
 app.set('view engine', 'hbs');
 
 app.use(myconnection(mysql, {
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  port: 3306,
-  database: 'crudnodejs'
+  MYSQLHOST: 'containers-us-west-36.railway.app',
+  MYSQLUSER: 'root',
+  MYSQLPASSWORD: 'BbWlQ1abtMpWiU6InfWN',
+  MYSQLPORT: 3306,
+  MYSQLDATABASE: 'railway'
 }, 'single'));
 
 app.listen(app.get('port'), () => {

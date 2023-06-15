@@ -37,5 +37,5 @@ app.listen(app.get('port'), () => {
 app.use('/', tasksRoutes);
 
 app.get('/', (req, res) => {
-  res.render('home');
+  res.render('index');
 });

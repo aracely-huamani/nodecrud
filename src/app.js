@@ -28,7 +28,7 @@ app.use(myconnection(mysql, {
   MYSQLPASSWORD: 'BbWlQ1abtMpWiU6InfWN',
   MYSQLPORT: 6760,
   MYSQLDATABASE: 'railway'
-}, 'single'));
+},));
 
 app.listen(app.get('port'), () => {
   console.log('Listening on port ', app.get('port'));
